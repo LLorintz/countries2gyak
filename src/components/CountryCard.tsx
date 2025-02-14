@@ -1,16 +1,21 @@
 import './countrycard.css'
+import { countryType } from '../type/countryType'
 
-const CountryCard = () => {
+type countryProps = {
+  country:countryType
+}
+
+const CountryCard = ({country}:countryProps) => {
   return (
     <div className='countryCard'>
         <div className='countryImage'>
-            <img src="https://flagcdn.com/w320/de.png" alt="" />
+            <img src={country.flags.png} alt="" />
         </div>
         <div className='countryData'>
-            <h3>Germany</h3>
-            <p>Population:83240525</p>
-            <p>Region:Europe</p>
-            <p>Capital:Berlin</p>
+            <h3>{country.name.common}</h3>
+            <p>Population:{country.population}</p>
+            <p>Region:{country.region}</p>
+            <p>Capital:{country.capital}</p>
         </div>
     </div>
   )
