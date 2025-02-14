@@ -1,0 +1,21 @@
+.countryCard{
+    width: 250px;
+    background-color: var(--Dark-Mode-Elements);
+    color: var(--Text-And-Light-Mode-Elements);
+    border-radius: 5px;
+  }
+  
+  .countryImage img{
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .countryData{
+    padding :10px;
+    padding-bottom: 30px;
+  }
+  
+  .countryData h3{
+   
+    margin-bottom: 15px;
+  }
