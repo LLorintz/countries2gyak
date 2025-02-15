@@ -1,11 +1,14 @@
-import AllCountries from './pages/allCountries'
+import Header from './components/header/Header'
+import AllCountries from './pages/AllCountries'
 import './App.css'
 
 function App() {
- 
+
   return (
     <>
-    <AllCountries></AllCountries>
+      
+      <Header></Header>
+      <AllCountries></AllCountries>
     </>
   )
 }

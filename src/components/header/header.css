@@ -1,0 +1,40 @@
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: var(--Text-And-Light-Mode-Elements);
+    background-color: var(--Dark-Mode-Elements);
+  }
+  
+  .header h5{
+    font-size: 1rem;
+  }
+  
+  .header button{
+    gap: 1rem;
+    display: flex;
+    font-size: 1.1rem;
+    background-color: var(--Dark-Mode-Elements);
+    border:none;
+    color:var(--Text-And-Light-Mode-Elements);
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .header button:hover{
+    background-color: var(--Dark-Mode-Background);
+  }
+
+  @media (min-width:505px) {
+    .header{
+        justify-content: space-between;
+    }
+    .header h5{
+        font-size: 3rem;
+      }
+  }
