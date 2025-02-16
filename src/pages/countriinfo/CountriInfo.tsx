@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import './countryinfo.css'
 import { useFetchCountryInfo } from '../../api/countryInfoApi'
+import { Link } from 'react-router-dom'
 
 const CountriInfo = () => {
 
@@ -14,15 +15,15 @@ const CountriInfo = () => {
    <div className='container'>
       <div className="countryinfo">
         <div>
-          <button>Back</button>
+        <Link to={'/'}><button>Back</button></Link>
         </div>
         <div className='row'>         
-          <img src="https://flagcdn.com/w320/de.png" alt="" />          
+          <img src={country?.flags.png} alt="" />          
           <div className="data">
-              <h2>Belgium</h2>
+              <h2>{country?.name.common}</h2>
               <div className='leftright'>
                 <div className="left">
-                  <p><b>Native Name:</b> Belgié</p>
+                  <p><b>Native Name:</b> {country?.name.nativeName && Object.values(country.name.nativeName)[0]?.common}</p>
                   <p><b>Population:</b> 11,319,511</p>
                   <p><b>Region:</b>Europe</p>
                   <p><b>Sub Region:</b> Western </p>

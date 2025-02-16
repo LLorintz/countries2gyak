@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { countryType } from "../type/countryType"
+import { countryInfoType } from "../type/countryInfoType"
 
 const fetchCountryInfo=async(countryname:string)=>{
     try {
@@ -9,7 +9,7 @@ const fetchCountryInfo=async(countryname:string)=>{
       }
       const data = await response.json()
      
-      return data
+      return data[0]
     } catch (error) {
       console.log(error)
       return null
@@ -19,7 +19,7 @@ const fetchCountryInfo=async(countryname:string)=>{
 
 export const useFetchCountryInfo =(countryname?:string)=>{
 
-    const [country, setCountry] = useState<countryType>()
+    const [country, setCountry] = useState<countryInfoType>()
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -42,7 +42,7 @@ export const useFetchCountryInfo =(countryname?:string)=>{
            }
         }
         getCountryInfo();
-    },[])
+    },[countryname])
 
     return { country, loading, error, };
 }
