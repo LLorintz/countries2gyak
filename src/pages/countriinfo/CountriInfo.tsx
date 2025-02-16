@@ -5,7 +5,7 @@ const CountriInfo = () => {
    <div className='container'>
       <div className="countryinfo">
         <div>
-        <button>Back</button>
+          <button>Back</button>
         </div>
         <div className='row'>         
           <img src="https://flagcdn.com/w320/de.png" alt="" />          
@@ -25,11 +25,12 @@ const CountriInfo = () => {
                   <p><b>Languages:</b> Deutch, french, German</p>
                 </div>
               </div>
-              <p>Border Countries:</p>
+              
               <div className="bordercountries">
+                <p>Border Countries:</p>
                 <button>France</button> 
               </div>
-            </div>          
+          </div>          
         </div>
       </div>
     </div>

@@ -1,72 +1,75 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
-   
+
 }
 
-.countryinfo{
- 
+.countryinfo {
+
     padding-left: 1rem;
     padding-right: 1rem;
     color: var(--Text-And-Light-Mode-Elements);
 }
 
-button{  
+button {
     padding: 10px 25px;
     color: var(--Text-And-Light-Mode-Elements);
-    background:  var(--Dark-Mode-Elements);
+    background: var(--Dark-Mode-Elements);
     border: none;
     outline: none;
     cursor: pointer;
     width: 120px;
-    margin-bottom: 50px;
-    flex-grow: 0;  /* Ne nyúljon ki */
-    flex-shrink: 0; /* Ne zsugorodjon */
+    flex-grow: 0;
+    /* Ne nyúljon ki */
+    flex-shrink: 0;
+    /* Ne zsugorodjon */
 }
 
-.countryinfo button:hover{
 
-}
-
-.data h2{
+.data h2 {
     margin: 1rem 0;
 }
 
-.data p{
+.data p {
     font-weight: 200;
 }
 
-.left{
+.left {
     margin: 1rem 0;
 }
 
-.right{
+.right {
     margin: 1rem 0;
 }
 
-.bordercountries{
+.bordercountries {
     margin: 1rem 0;
 }
 
+.row {
+    margin-top: 50px;
+}
 
 @media (min-width:650px) {
 
-   
+
     .row {
-        display:flex;
-        flex-direction: row;
-        gap:1rem
-    }
-   
-    .data{
         display: flex;
-        flex-direction: column;
-        width: 800px;
+        flex-direction: row;
+        gap: 1rem;
+
     }
 
-    .leftright{
+    .data {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        width: 1000px;
+        margin-left: 100px;
+    }
+
+    .leftright {
+        display: flex;
+        gap: 4rem;
     }
 
     .row img {
@@ -74,4 +77,11 @@ button{
         height: 100%;
     }
 
-  }
+    .bordercountries {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 50px;
+        column-gap: 1rem;
+    }
+}

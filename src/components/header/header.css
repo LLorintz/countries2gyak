@@ -15,9 +15,9 @@
   }
   
   .header button{
-    gap: 1rem;
     display: flex;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
+    gap:0.3rem;
     background-color: var(--Dark-Mode-Elements);
     border:none;
     color:var(--Text-And-Light-Mode-Elements);
