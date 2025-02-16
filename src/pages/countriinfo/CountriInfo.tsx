@@ -1,6 +1,15 @@
+import { useParams } from 'react-router-dom'
 import './countryinfo.css'
+import { useFetchCountryInfo } from '../../api/countryInfoApi'
 
 const CountriInfo = () => {
+
+  const {countryname} = useParams()
+
+  const {country} = useFetchCountryInfo(countryname)
+
+  console.log(country)
+
   return (
    <div className='container'>
       <div className="countryinfo">
