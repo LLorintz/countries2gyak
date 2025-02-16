@@ -1,5 +1,6 @@
 import './countrycard.css'
-import { countryType } from '../type/countryType'
+import { countryType } from '../../type/countryType' 
+import { Link } from 'react-router-dom'
 
 type countryProps = {
   country:countryType
@@ -7,6 +8,7 @@ type countryProps = {
 
 const CountryCard = ({country}:countryProps) => {
   return (
+    <Link to={`/country/${country.name.common}`}>
     <div className='countryCard'>
         <div className='countryImage'>
             <img src={country.flags.png} alt="" />
@@ -18,6 +20,7 @@ const CountryCard = ({country}:countryProps) => {
             <p>Capital:{country.capital}</p>
         </div>
     </div>
+    </Link>
   )
 }
 
