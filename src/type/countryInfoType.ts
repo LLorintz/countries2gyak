@@ -3,8 +3,7 @@ export type countryInfoType = {
         common: string;
         official: string;
         nativeName: {
-          [key: string]: {
-           
+          [key: string]: {          
             common: string;
           };
         };
@@ -15,8 +14,12 @@ export type countryInfoType = {
     subregion:string,
     capital:string[],
     tld:string[],
-    currencies:string,
+    currencies:{
+      [key:string]:{
+        name:string;
+      }
+    },
     flags:{png:string},
-    languages:string[],
-    borders:string,
+    languages:Record<string,string>,
+    borders:string[],
 }

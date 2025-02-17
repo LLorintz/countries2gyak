@@ -24,21 +24,25 @@ const CountriInfo = () => {
               <div className='leftright'>
                 <div className="left">
                   <p><b>Native Name:</b> {country?.name.nativeName && Object.values(country.name.nativeName)[0]?.common}</p>
-                  <p><b>Population:</b> 11,319,511</p>
-                  <p><b>Region:</b>Europe</p>
-                  <p><b>Sub Region:</b> Western </p>
-                  <p><b>Capital:</b> Brussels</p>
+                  <p><b>Population:</b> {country?.population.toLocaleString("en-US")}</p>
+                  <p><b>Region:</b>{country?.region}</p>
+                  <p><b>Sub Region:</b>{country?.subregion}</p>
+                  <p><b>Capital:</b>{country?.capital}</p>
                 </div>
                 <div className="right">
-                  <p><b>Top Level Domain:</b> be</p>
-                  <p><b>Currencies:</b> Euro</p>
-                  <p><b>Languages:</b> Deutch, french, German</p>
+                  <p><b>Top Level Domain:</b>{country?.tld[0]}</p>
+                  <p><b>Currencies: </b>{country?.currencies && Object.values(country?.currencies)[0].name}</p>
+                  <p><b>Languages: </b>{country?.languages && Object.values(country.languages).join(", ")}</p>
                 </div>
               </div>
               
               <div className="bordercountries">
                 <p>Border Countries:</p>
-                <button>France</button> 
+                {country?.borders.map(country=>(
+                  <button>{country}</button>
+                  
+                ))}
+                 
               </div>
           </div>          
         </div>
