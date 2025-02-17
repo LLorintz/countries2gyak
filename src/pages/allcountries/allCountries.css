@@ -10,3 +10,9 @@
     font-size: 3rem;
     color: var(--Text-And-Light-Mode-Elements)
   }
+
+  .top{
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+  }
