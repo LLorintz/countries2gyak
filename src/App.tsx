@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from './components/header/Header'
+
 import AllCountries from './pages/allcountries/AllCountries'
 import CountriInfo from './pages/countriinfo/CountriInfo'
 import './App.css'
