@@ -5,3 +5,8 @@
     row-gap: 2rem;
     justify-content: center;
   }
+
+  h4{
+    font-size: 3rem;
+    color: var(--Text-And-Light-Mode-Elements)
+  }

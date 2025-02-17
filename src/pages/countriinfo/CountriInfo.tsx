@@ -7,11 +7,14 @@ const CountriInfo = () => {
 
   const {countryname} = useParams()
 
-  const {country} = useFetchCountryInfo(countryname)
+  const {country,loading,error} = useFetchCountryInfo(countryname)
 
   console.log(country)
 
   return (
+  <>
+  {loading && !error && <h4>Loading...</h4>}
+  {error &&! loading && <h4>{error}</h4>}
    <div className='container'>
       <div className="countryinfo">
         <div>
@@ -48,6 +51,7 @@ const CountriInfo = () => {
         </div>
       </div>
     </div>
+  </>
   )
 }
 
