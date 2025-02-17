@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react"
 import { countryType } from "../../type/countryType"
+import './search.css'
 
 type searchProps = {
     countries: countryType[]
